@@ -1,0 +1,111 @@
+h1 {
+  font-size: 3rem;
+  color: white;
+  margin-left: 1rem;
+  margin-top: 3rem;
+}
+.main {
+  text-align: center;
+  background-color: #28283d;
+  border-radius: 1rem;
+}
+
+.container {
+  width: 400px;
+  max-width: 100%;
+  margin: 1rem 0.5rem;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.5rem;
+}
+
+.list {
+  min-height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+}
+
+.box {
+  padding: 20px 10px;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.box:last-child {
+  border: none;
+}
+
+.list.cdk-drop-list-dragging .box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.backlog-hue {
+  /* background-color: #FF8F00; */
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(255, 200, 124) 0%,
+    rgb(252, 251, 121) 90%
+  );
+}
+
+.backlog-glow:hover {
+  box-shadow: 0 5px 15px rgba(255, 200, 124, 0.4);
+}
+
+.todo-hue {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(186, 190, 245) 0%,
+    rgb(192, 192, 245) 33.1%,
+    rgb(218, 203, 246) 90%
+  );
+}
+
+.todo-glow:hover {
+  box-shadow: 0 5px 15px rgba(192, 192, 245, 0.4);
+}
+
+.inprogress-hue {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgba(91, 173, 254, 0.46) 0%,
+    rgba(91, 224, 254, 0.46) 47.2%,
+    rgba(170, 254, 235, 0.43) 90%
+  );
+}
+
+.inprogress-glow:hover {
+  box-shadow: 0 5px 15px rgba(91, 173, 254, 0.4);
+}
+
+.done-hue {
+  background: linear-gradient(120deg, #d5fc79 0%, #96e6a1 100%);
+}
+
+.done-glow:hover {
+  box-shadow: 0 5px 15px rgba(196, 255, 100, 0.4);
+}
